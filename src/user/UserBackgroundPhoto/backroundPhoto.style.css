@@ -1,0 +1,14 @@
+.section-backgroundForm{
+
+}
+
+.backgroundForm__container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    padding: 7rem;
+    background: black;
+    border-radius: 5px;    
+    z-index: 2000;
+}

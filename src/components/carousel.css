@@ -1,0 +1,23 @@
+.template{
+    position: relative;
+    text-align: center;
+    /* padding: 2rem; */        
+}
+
+.template__container--1{
+    height: 30rem;
+    max-width: 100%;
+    background: mediumaquamarine;
+} 
+.template__container--2{
+    height: 15rem;
+    max-width: 100%;
+    background: rgb(108, 106, 231);
+   
+}
+.template__container--3{
+    height: 15rem;
+    max-width: 100%;
+    background: rgb(248, 153, 44);
+   
+}

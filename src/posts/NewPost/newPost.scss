@@ -1,0 +1,82 @@
+@import '../../index.scss';
+
+
+.section-tweet {
+    padding: 3rem 0;
+
+    &__header {
+        text-align: center;
+        &>h1{
+            &>span{
+                color: $primary-light;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%; 
+        max-width: 500px;       
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: $transition-sm;
+
+        &>form {
+            
+            border-radius: 5px;
+            padding: 1rem;            
+           
+            &>input[type="text"],
+            textarea {
+                border: 1px solid black;
+                border-radius: 5px;
+                width: 100%;
+                margin-top: 2rem;
+                padding: .3rem;
+            }
+            &>label {
+                cursor: pointer;
+                color: white;
+                height: 50px;
+                width: 160px;
+                background-color: $primary-light;
+                border-radius: 50px;                
+                margin: auto;               
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: $transition-sm;                
+
+                &:hover {                    
+                    color: $tertiary-dark;
+                    box-shadow: 1px 1px 3px $tertiary-dark;
+                }
+                &>input[type="file"] {
+                    opacity: 0;
+                    position: absolute;                    
+                }
+            }
+            &>button{
+                margin: 0 auto;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+.error-msg{
+    color: orangered;
+    letter-spacing: 1px;
+}
+@media screen and (min-width: 768px){
+    .section-tweet{
+        padding: 8rem 0;  
+        &__content{
+            &:hover{
+                 background: rgba($tertiary-light, .1);
+                box-shadow: 1px 1px 3px $tertiary-light;
+            }
+        }     
+    }
+    
+}

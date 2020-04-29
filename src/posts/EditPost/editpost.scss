@@ -1,0 +1,74 @@
+@import '../../index.scss';
+
+.section-editpost {
+    padding: 3rem 0;    
+    &__header {
+        text-align: center;
+        &>h1 {
+            &>span {
+                color: $primary-light;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 500px;       
+        margin: 3rem auto;
+
+        &>img {
+            width: 100%;
+            height:250px;
+            object-fit: cover;
+        }
+
+        &>form {
+            padding: 2rem 1rem;
+            &>textarea{
+                height: 100px;
+            }
+            &>input[type="text"],
+            textarea {
+                border: 1px solid black;
+                border-radius: 5px;
+                width: 100%;
+                margin-top: 2rem;
+                padding: .3rem;
+            }
+
+            &>label {
+                cursor: pointer;
+                color: white;
+                height: 50px;
+                width: 160px;
+                background-color: $primary-light;
+                border-radius: 50px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: $transition-sm;
+
+                &:hover {
+                    color: $tertiary-dark;
+                    box-shadow: 1px 1px 3px $tertiary-dark;
+                }
+
+                &>input[type="file"] {
+                    opacity: 0;
+                    position: absolute;
+                }
+            }
+            &>.form-btns{
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+@media screen and(min-width: 768px){
+    .section-editpost{
+        padding: 8rem 0;
+    }
+}

@@ -1,0 +1,230 @@
+@import '../../index.scss';
+
+.nav-links {
+    display: none;
+}
+
+.nav {
+    height: 5rem;
+    padding: 1rem;
+    display: grid;
+    transition: all .5s;
+}
+
+.nav-logo {
+    width: 150px;
+    display: block;
+}
+
+.nav-center {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+.nav-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.nav-menu {
+    cursor: pointer;
+    font-size: 2.5rem;
+    justify-self: end;
+    color: $tertiary-dark;
+    transition: $transition-sm;
+    &:hover{
+        transform: scale(1.1) rotate(180deg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        background: linear-gradient(to right, $tertiary-light, $tertiary-dark);
+        position: fixed;
+        width: 100vw;
+        z-index: 4;
+    }
+
+    .nav-logo {
+        width: 150px;
+        display: block;
+        margin: -23px 0 0 0;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        column-gap: 1.5rem;
+        justify-self: end;
+        margin-bottom: 0;
+    }
+
+    .nav-links li {
+        list-style: none;
+        font-size: 1.2rem;
+    }
+
+    .nav-links a {
+        cursor: pointer;
+        text-decoration: none !important;
+        padding: .3rem 1rem;
+        border-radius: 50px;
+        transition: $transition-sm;
+        color: $white !important;
+    }
+
+    .nav-links a:hover {
+        background: $primary-light;
+        color: $tertiary-dark !important;
+    }
+
+    .nav-center {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        // justify-content: center;
+        align-items: center;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: linear-gradient(to bottom right, rgba($tertiary-dark, 1), rgba($tertiary-dark, .9));
+    background: linear-gradient(to bottom left, 
+    rgba(#000, .9), rgba(#000, .5)),
+    url('../../assets/unsplash.jpg');
+    background-size: cover;
+    
+    z-index: 5;
+    display: grid;    
+    place-items: center;
+    transition: all .3s ease-out;
+    /*   */
+    transform: translateX(-100%);
+}
+
+.show-sidebar {
+    transform: translateX(0);
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+.sidebar-links {
+    text-align: center;
+
+    &-profile {
+        font-size: 3rem;
+        color: $white;
+        letter-spacing: 5px;
+        transition: $transition-sm;
+
+        &:hover {
+            cursor: pointer;
+            color: $primary-light;
+        }
+    }
+
+    &-logout {
+        color: $white;
+        transition: $transition-sm;
+        margin-top: 1rem;
+
+        &:hover {
+            cursor: pointer;
+            color: $danger;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.sidebar-links a {
+    text-decoration: none !important;
+    font-size: 3rem;
+    color: white;
+    transition: all .5s;
+    letter-spacing: 2px;
+    display: inline-block;
+    letter-spacing: 5px;
+    /* for being able to add margin bottom */
+}
+
+.sidebar-links a:hover {
+    color: $primary-light;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 2.5rem;
+    background: transparent;
+    border-color: transparent;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    transition: all .5s;
+    color: rgba($danger, .6);
+}
+
+.close-btn:hover {
+    color: $danger;
+}
+
+
+
+
+/*<<<<<<< NAVBAR ICONS >>>>>>>*/
+.icon {
+    font-size: 30px;
+    transition: all .5s;
+}
+
+.icon:hover {
+    transform: scale(1.3);
+}
+
+/*<<<<<<<<<<<<<<< USER DROPDOWN OPTIONS >>>>>>>>>>>>>>>>*/
+/*Position user icon*/
+.dropdown-toggle {
+    background: transparent !important;
+    margin-top: -5px !important;
+    border: none !important;
+}
+
+/*remove fa-caret*/
+.dropdown-toggle:after {
+    content: none !important;
+}
+
+.dropdown-toggle:focus {
+    box-shadow: none !important;
+}
+
+/*Position dropdown popup*/
+.dropdown-menu {
+    transform: translate(-83%, 50%) !important;
+    background: linear-gradient($tertiary-light, $tertiary-dark);
+}
+
+/*Style items*/
+.dropdown-item {
+    font-size: 14px !important;
+    color: rgb(0, 218, 158) !important;
+    font-weight: 700;
+}
+
+.dropdown-item:hover {
+    font-weight: 700;
+    color: #fff !important;
+    background: $primary-light !important;
+}

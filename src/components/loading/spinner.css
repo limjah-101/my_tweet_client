@@ -1,0 +1,14 @@
+.spinner-section{
+    height: 100vh;
+    background: #fff;   
+}
+
+.spinner__container{            
+    position: relative;    
+    padding: 5rem;
+    border-radius: 5px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;    
+}

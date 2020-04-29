@@ -1,0 +1,119 @@
+@import '../../index.scss';
+
+.section {
+    // height: 100vh;    
+    // background: linear-gradient(rgba($tertiary-dark, .9), rgba($tertiary-light, .5));
+    // url('../../assets/angular.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem 1rem;
+
+    &__header {
+        text-align: center;
+
+        &>h1 {
+            letter-spacing: 2px;
+
+            &>span {
+                color: $primary-light;
+            }
+        }
+
+        &>span {
+            padding: 1rem;
+            color: orangered;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+    }
+
+    &__container {        
+        border-radius: .5rem;
+        padding: 2rem;
+        width: 500px;
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        &>img {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid black;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+        &>form {
+            margin-top: 1rem;
+        }
+
+        &-form {
+
+            &_textarea {
+                padding: .5rem 1rem;
+
+                &>textarea {
+                    width: 100%;
+                    max-width: 370px;
+                    height: 70px;
+                    border: 1px solid $tertiary-dark;
+                    border-radius: 5px;
+                    padding: .5rem;
+                }
+            }
+
+            &_btn {
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            &_item {
+                padding: .5rem 1rem;
+                display: grid;
+                grid-template-columns: 40px 1fr;
+                justify-content: center;
+                align-items: center;
+                
+
+                &>input[type="file"] {
+                    margin-left: 5rem;
+                    opacity: 0;
+                }
+
+                &>label {
+                    cursor: pointer;
+                    color: white;
+                    height: 50px;
+                    width: 170px;
+                    background-color: $primary-light;
+                    border-radius: 50px;
+                    position: absolute;
+                    margin: auto;
+                    top: -11rem;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: $transition-sm;
+
+                    &:hover {
+                        background: darken($primary-light, 3%);
+                        color: $tertiary-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section {        
+        padding: 7rem 1rem;               
+    }
+}

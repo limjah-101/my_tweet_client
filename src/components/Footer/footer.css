@@ -1,0 +1,7 @@
+.section__footer{
+    background: linear-gradient(-50deg, rgb(39, 39, 39), rgb(68, 65, 65));    
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    padding: 5rem;
+}

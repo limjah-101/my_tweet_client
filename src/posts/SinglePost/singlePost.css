@@ -1,0 +1,42 @@
+.section-post{
+    max-width: 1170px;
+    padding: 2rem 1rem;
+    margin: auto;
+}
+@media screen and (min-width: 768px) {
+    .section-post{
+        padding: 9rem 2rem;
+    }
+}
+
+.loggedInUser__icon{
+    color: grey !important ;  
+    transition: all .5s;     
+}
+.loggedInUser__icon:hover{
+    cursor: pointer;
+    color: grey !important;   
+    transform: scale(1.1); 
+}
+.icon-badge{
+    font-size: 20px !important;
+    margin-left: -5px;    
+}
+.like-icon{
+    font-size: 25px; 
+    color: rgb(0,218,158);   
+}
+.dislike-icon{
+    font-size: 25px;
+    color: orangered;
+}
+.comment-icon{
+    font-size: 20px; 
+    color: rgb(123, 126, 125);   
+}
+.edit:hover{
+    color: rgb(0,218,158) !important;
+}
+.delete:hover{    
+    color: rgb(243, 14, 14) !important;       
+}

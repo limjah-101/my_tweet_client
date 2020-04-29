@@ -1,0 +1,71 @@
+@import '../../index.scss';
+
+.section-users {
+    padding: 3rem 0;
+
+    &__header {
+        text-align: center;
+        margin-bottom: 3rem;
+
+        &>h1 {
+            &>span {
+                color: $primary-light;
+            }
+        }
+    }
+}
+
+.user-card {
+    margin: auto;
+    max-width: 400px;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    border-radius: 5px;
+    background: rgba($tertiary-light, .1);
+    transition: $transition-sm;
+    &:hover {
+        background: rgba($tertiary-light, .2);
+        box-shadow: 1px 1px 3px $tertiary-light;
+    }
+
+    &__img {
+        &>img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+    }
+
+    &__body {
+        width: 10rem;
+        margin: 1rem auto;
+
+        &-item {
+            display: grid;
+            grid-template-columns: 30px 1fr;
+
+            &>a {
+                color: $primary-light;
+                letter-spacing: $letter-space-lg;
+
+                &:hover {
+                    color: $primary-light;
+                }
+            }
+
+            &>p {
+                margin: 0;
+                letter-spacing: $letter-space-lg;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .section-users{
+        padding: 8rem 0;
+    }
+}
