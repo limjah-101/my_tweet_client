@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.61dfd9e6.chunk.css",
+    "main.js": "/static/js/main.1ea38bb6.chunk.js",
+    "main.js.map": "/static/js/main.1ea38bb6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.cfae3202.js",
+    "runtime-main.js.map": "/static/js/runtime-main.cfae3202.js.map",
+    "static/css/2.de424728.chunk.css": "/static/css/2.de424728.chunk.css",
+    "static/js/2.09394036.chunk.js": "/static/js/2.09394036.chunk.js",
+    "static/js/2.09394036.chunk.js.map": "/static/js/2.09394036.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.270f7fd73ee2fd2d362cefe1ddd983d3.js": "/precache-manifest.270f7fd73ee2fd2d362cefe1ddd983d3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/static/css/2.de424728.chunk.css.map",
+    "static/css/main.61dfd9e6.chunk.css.map": "/static/css/main.61dfd9e6.chunk.css.map",
+    "static/js/2.09394036.chunk.js.LICENSE.txt": "/static/js/2.09394036.chunk.js.LICENSE.txt",
+    "static/media/avatar.png": "/static/media/avatar.f817a688.png",
+    "static/media/default-avatar.jpg": "/static/media/default-avatar.fc6a7475.jpg",
+    "static/media/node.png": "/static/media/node.fed36d15.png",
+    "static/media/sz-logo.png": "/static/media/sz-logo.0a8f7727.png",
+    "static/media/tropical-escape.jpg": "/static/media/tropical-escape.d84c3587.jpg",
+    "static/media/navbar.scss": "/static/media/unsplash.f6d83cc4.jpg",
+    "static/media/wp.jpg": "/static/media/wp.362d508a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cfae3202.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.09394036.chunk.js",
+    "static/css/main.61dfd9e6.chunk.css",
+    "static/js/main.1ea38bb6.chunk.js"
+  ]
+}
