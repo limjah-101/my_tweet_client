@@ -93,8 +93,8 @@ class NewPost extends Component {
 
     isInputValid = () => {
         const { title, body, postImgSize } = this.state;
-        if (postImgSize > 1000000) {
-            this.setState({ error: "Image should be less than 1Mg (100Kb)" });
+        if (postImgSize > 5000000) {
+            this.setState({ error: "Image should be less than 5Mg (500Kb)" });
             return false;
         }
         if (title.length === 0){
