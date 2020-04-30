@@ -115,15 +115,15 @@ class EditProfile extends Component {
                     />
                     
                     <form onSubmit={ this.handleFormSubmit }>                                                       
-                        <div className="section__container-form_item">  
-                            <label htmlFor="file">Choose an image</label>                              
+                        {/* <div className="section__container-form_item">   */}
+                            <label htmlFor="file">Choose an image                            
                             <input
                                 onChange={this.handleInputChange('photo')}
-                                type="file"
-                                className="form-control input-file"
+                                type="file"                                
                                 accept="image/*"
-                            />
-                        </div>
+                                size="40"
+                                /></label> 
+                        {/* </div> */}
                         
                         <div className="section__container-form_item">
                             <AiOutlineGlobal size={20} /> 

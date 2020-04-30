@@ -15,12 +15,9 @@
 
     &__content {
         width: 100%; 
-        max-width: 500px;       
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
+        max-width: 500px;        
         transition: $transition-sm;
+        margin: auto;
 
         &>form {
             
