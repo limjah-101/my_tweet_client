@@ -3,7 +3,8 @@ import './allPost.scss';
 import defaultImg from '../../assets/tropical-escape.jpg'
 import { Link } from 'react-router-dom';
 import avatar from '../../assets/avatar.png';
-import {AiFillLike} from 'react-icons/ai';
+import { AiFillHeart } from 'react-icons/ai';
+import { FaComment } from 'react-icons/fa';
 
 const AllPosts = props => {
     console.log("POST",props)
@@ -21,8 +22,9 @@ const AllPosts = props => {
                 />                        
                 <span>                    
                     by <Link to={`${isTweetter}`} >{ tweeterName } </Link>
-                    on { new Date(post.created).toDateString() }                    
-                </span>                            
+                    | on { new Date(post.created).toDateString().substring(10) }                    
+                </span> 
+                                         
             </div>
             <img 
                 onError={ i => (i.target.src = `${defaultImg}`)}
@@ -31,14 +33,16 @@ const AllPosts = props => {
             />
         
             <div className="post-card__footer">
-                <span><AiFillLike size={20}/> {post.likes.length} </span>
+                
                 <Link to={`/post/${post._id}`}>                            
-                    <h4>{ post.title }</h4>
+                    <span>{ post.title }</span>
                 </Link> 
-                <p className="">{ post.body.substring(0, 100) }</p>                                                
-                <Link to={`/post/${post._id}`} className="">
+                {/* <p className="">{ post.body.substring(0, 100) }</p>                                                 */}
+                {/* <Link to={`/post/${post._id}`} className="">
                     Read More ...
-                </Link>                        
+                </Link>                         */}
+                <span><AiFillHeart size={20} /> {post.likes.length} </span> 
+                <span><FaComment size={17} /> {post.comments.length} </span>  
             </div>                                                
         </article>
        

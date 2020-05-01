@@ -16,13 +16,15 @@
 }
 
 .user-card {
-    margin: auto;
+    margin: 0 auto;
+    width: 100%;
     max-width: 400px;
     margin-bottom: 2rem;
     padding: 2rem 0;
     border-radius: 5px;
     background: rgba($tertiary-light, .1);
     transition: $transition-sm;
+
     &:hover {
         background: rgba($tertiary-light, .2);
         box-shadow: 1px 1px 3px $tertiary-light;
@@ -64,8 +66,18 @@
     }
 }
 
-@media screen and (min-width: 768px){
-    .section-users{
+@media screen and (min-width: 768px) {
+    .section-users {
         padding: 8rem 0;
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 1170px;
+            padding: 3rem 0;
+        }
     }
 }

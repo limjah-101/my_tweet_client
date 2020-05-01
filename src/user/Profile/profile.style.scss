@@ -59,7 +59,7 @@
             &>p{
                 margin-bottom: 0;
                 padding: .6rem ;
-                // border-radius: 5px;
+                border: 1px solid $tertiary-light;
                 transition: $transition-sm;
                 &:hover {
                     background: $primary-light;

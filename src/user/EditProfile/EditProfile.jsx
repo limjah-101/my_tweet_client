@@ -184,7 +184,7 @@ class EditProfile extends Component {
                             <button className="btn-green">UPDATE</button>
                             <button
                                 onClick={this.backFunction}
-                            className="btn-green">CANCEL</button>
+                            className="btn-default">CANCEL</button>
                         </div>                                                
                     </form>
                 </div>
