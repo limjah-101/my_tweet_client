@@ -76,7 +76,7 @@ class Navbar extends Component{
             <nav className={`nav`}>                                            
                 <div className="nav-center">
                     <div className="nav-header">
-                        <img src={logo} alt=""  className="nav-logo" />
+                        <Link to="/"><img src={logo} alt=""  className="nav-logo" /></Link>
                         <GiHamburgerMenu className="nav-menu" onClick={this.showSidebar}/>
                     </div>
                                 

@@ -58,6 +58,7 @@ export const logout = (next) => {
     }
 }
 
+
 export const isAuthenticated = () => {
     if (typeof window === "undefined"){
         return false;
@@ -97,7 +98,7 @@ export const authenticate = (jwt, next) => {
 
 //<<<<<<<<<<<<<<<<<<<<< GOGGLE LOGIN >>>>>>>>>>>>>>>>>>>>
 export const socialLogin = user => {
-    return fetch(`${process.env.REACT_APP_API_URI}/social-login/`, {
+    return fetch(`${process.env.REACT_APP_API_URI}/social-login`, {
         method: "POST",
         headers: {
             Accept: "application/json",

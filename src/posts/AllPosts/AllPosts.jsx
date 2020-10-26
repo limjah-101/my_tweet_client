@@ -7,7 +7,7 @@ import { AiFillHeart } from 'react-icons/ai';
 import { FaComment } from 'react-icons/fa';
 
 const AllPosts = props => {
-    console.log("POST",props)
+    console.log("POST",props.post)
     const { post } = props;
     const isTweetter = post.postedBy ? `/user/${post.postedBy._id}` : "";
     const tweeterName = post.postedBy ? post.postedBy.name : " Unknown ";

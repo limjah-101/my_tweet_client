@@ -20,7 +20,7 @@ class SocialLogin extends Component {
             email: email,
             imageUrl: imageUrl
         };
-        // console.log("user obj to social login: ", user);
+        console.log("user obj to social login: ", user);
         socialLogin(user).then(data => {
             console.log("signin data: ", data);
             if (data.error) {
@@ -44,11 +44,10 @@ class SocialLogin extends Component {
  
         return (
             <GoogleLogin
-                clientId="947299159026-82tm0sccl916kunuoffupnnv1ffiblr4.apps.googleusercontent.com
-                "
+                clientId="1079539042456-52jmqpbn4246n7ic9lrobvdsjgu4jf92.apps.googleusercontent.com"
                 buttonText="Sign with Google"
-                onSuccess={this.responseGoogle}
-                onFailure={this.responseGoogle}                
+                onSuccess={ this.responseGoogle }
+                onFailure={ this.responseGoogle }                
             />
         );
     }
