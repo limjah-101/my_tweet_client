@@ -3,8 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import Layout from './HOC/Layout';
 import Home from './components/Home/Home';
-import Register from './user/Register';
-import Login from './user/Login';
+import Register from './user/Register/Register';
+import Login from './user/Login/Login';
 import FindPeople from './user/FindPeople/FindPeople';
 import AllUsers from './user/AllUsers/AllUsers';
 import Profile from './user/Profile/Profile';

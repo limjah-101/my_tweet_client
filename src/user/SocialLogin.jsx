@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import { socialLogin, authenticate } from "../auth";
+import './Login/login.scss';
  
 class SocialLogin extends Component {
     constructor() {
@@ -33,9 +34,10 @@ class SocialLogin extends Component {
             }
         });
     };
+    
  
     render() {
-        // redirect
+        // redirect        
         const { redirectToReferrer } = this.state;
 
         if (redirectToReferrer) {
@@ -45,9 +47,12 @@ class SocialLogin extends Component {
         return (
             <GoogleLogin
                 clientId="1079539042456-52jmqpbn4246n7ic9lrobvdsjgu4jf92.apps.googleusercontent.com"
-                buttonText="Sign with Google"
+                render={renderProps => (
+                    <button className="btn__google" onClick={renderProps.onClick}>Se connecter avec Google</button>
+                )}
+                // buttonText="Se connecter avec Google"
                 onSuccess={ this.responseGoogle }
-                onFailure={ this.responseGoogle }                
+                onFailure={ this.responseGoogle }                              
             />
         );
     }

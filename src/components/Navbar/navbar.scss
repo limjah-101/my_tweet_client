@@ -8,12 +8,13 @@
     height: 5rem;
     padding: 1rem;
     display: grid;
-    transition: all .5s;
+    grid-template-columns: 100px 1fr;
+    //transition: all .5s;
 }
 
 .nav-logo {
-    width: 150px;
-    display: block;
+    width: 50px;
+    display: none;
 }
 
 .nav-center {
@@ -32,65 +33,91 @@
     cursor: pointer;
     font-size: 2.5rem;
     justify-self: end;
-    color: $tertiary-dark;
+    color: $white;
     transition: $transition-sm;
+    background: $violet;
+    border-radius: 50px;
+    padding: .25rem;
     &:hover{
         transform: scale(1.1) rotate(180deg);
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1275px) {
     .nav {
-        background: linear-gradient(to right, $tertiary-light, $tertiary-dark);
+        background: transparent;
         position: fixed;
         width: 100vw;
         z-index: 4;
+        padding: 0 1rem;
     }
 
     .nav-logo {
-        width: 150px;
+        width: 50px;        
+        align-self: center;
         display: block;
-        margin: -23px 0 0 0;
+
     }
 
     .nav-menu {
         display: none;
     }
 
-    .nav-links {
+    .nav-links {        
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        justify-items: center;
+        grid-template-columns: repeat(5, 1fr);        
         column-gap: 1.5rem;
         justify-self: end;
-        margin-bottom: 0;
     }
 
     .nav-links li {
         list-style: none;
-        font-size: 1.2rem;
     }
 
-    .nav-links a {
+    .nav-auth a{
+        display: block;
+        padding: .15rem .75rem;
+        border: 3px solid $violet;
+        border-radius: 50px;   
+        background: $violet;  
+        transition: $transition-sm;           
+        letter-spacing: 1px;
+        font-weight: bold;                
+        color: $white;        
+        text-align: center;
+    }
+    .nav-auth a:hover{
+        color: $violet;
+        background: transparent;
+    }
+    
+    .nav-links li a {
+        font-size: 1rem;
+        font-weight: bold;
         cursor: pointer;
-        text-decoration: none !important;
-        padding: .3rem 1rem;
-        border-radius: 50px;
-        transition: $transition-sm;
-        color: $white !important;
+        text-decoration: none;                
+         
     }
 
-    .nav-links a:hover {
-        background: $primary-light;
-        color: $tertiary-dark !important;
-    }
-
+    
     .nav-center {
         display: grid;
-        grid-template-columns: auto 1fr;
-        // justify-content: center;
+        grid-template-columns: 1fr 2fr;        
         align-items: center;
+        padding: 0 2rem;
     }
+    /*V.2*/
+   
+   
+
+   svg{       
+       stroke-width: 4rem;
+       stroke-linecap: round;       
+   }
+   svg:hover{
+       color: red;
+   }
+    
 }
 
 .sidebar {
@@ -108,13 +135,18 @@
     z-index: 5;
     display: grid;    
     place-items: center;
-    transition: all .3s ease-out;
+    transition: all 2s ease-out;
     /*   */
-    transform: translateX(-100%);
+    //transform: translateX(-100%);
+    display: none;
+    
 }
 
 .show-sidebar {
-    transform: translateX(0);
+    //transform: translateX(0);
+    display: block;
+    
+    
 }
 
 .sidebar li {

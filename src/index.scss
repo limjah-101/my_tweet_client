@@ -8,6 +8,28 @@ $secondary-dark: rgb(163, 211, 156);
 $tertiary-light: rgb(179, 176, 176);
 $tertiary-dark: rgb(67, 67, 67);
 
+/*=======V2 color palette=======*/
+$pink: rgb(237, 163, 164); //PINK ICING
+$green: rgb(152, 221, 211); //PALE ROBIN EGG BLUE
+$beige: rgb(248, 215, 165); //PROSECCO
+$blue: rgb(138, 211, 250); //KUL SHARIF BLUE
+
+
+$violet: rgb(142, 145, 244); //LAVENDER BLUE SHADOW
+$violet-light: rgb(123, 116, 200); //KICKSTART PURPLE
+$violet-dark: rgb(94, 98, 214); //EXODUS FRUIT
+
+$white: rgb(255, 255, 255); //WHITE
+$white-1: rgb(247, 245, 245); //WHITE
+
+//$grey-light: rgb(244, 245, 244); //LIGHTHOUSE
+$grey-light: rgb(246, 249, 252);
+$grey: rgb(204, 204, 204); 
+$grey-dark: rgb(166, 163, 166); //BLACKENED PEARL
+$grey-dark-1: rgb(79, 76, 82); //BLACKENED PEARL
+$grey-dark-2: rgb(38, 36, 38); //NERO
+
+
 $white: #fff;
 $black: #000;
 $danger: orangered;
@@ -18,6 +40,38 @@ $letter-space-sm: .3px;
 $letter-space-lg: .6px;
 $letter-space-xl: 1.3px;
 
+//======MIXINS=======
+%form-input{    
+    border: none;
+    background: $white-1;
+    border-radius: 10px;
+    color: $grey-dark;
+    outline: none;
+    padding: .85rem .5rem;
+    caret-color: $violet;                
+    &:focus{
+        border: 1px solid $violet;                    
+    }
+    &::placeholder{
+        color: $grey;
+    }
+}
+%button-block{
+    padding: 1rem 0;
+    border: none;
+    border-radius: 10px;    
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+    box-shadow: 2px 2px 10px $grey;
+    outline: none;             
+}
+%p-muted{
+    color: $grey;
+    font-size: .75rem;
+    letter-spacing: 1px;
+}
+
 /*  */
 * {
     margin: 0;
@@ -25,15 +79,11 @@ $letter-space-xl: 1.3px;
     box-sizing: border-box;
 }
 
-body {
-    // min-height: 150vh;
-    height: auto;
+body {        
     font-family: 'Lato', sans-serif;
-    // background: linear-gradient(rgba($tertiary-dark, .9), rgba($tertiary-light, .5));
-    // url('../../assets/angular.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+    background: $white;
+    
+    }
 
 .btn-green {
     width: 120px;

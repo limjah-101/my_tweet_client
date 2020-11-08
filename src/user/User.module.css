@@ -1,4 +1,5 @@
 /*<<<<<<<<<<<<<<<<<<<<< REGISTER STYLES >>>>>>>>>>>>>>>>>>>>*/
+
 .section__register{
     height: 90vh;
     background: #fff;
@@ -93,7 +94,7 @@
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<< INPUTS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-textarea,
+/* textarea,
 input[type=text], 
 input[type=email],
 input[type=password],
@@ -118,6 +119,6 @@ input[type=file]{
     border: none;
     background: transparent;
     width: 150px;
-    /* background: red;   */
     
-}
+    
+} */

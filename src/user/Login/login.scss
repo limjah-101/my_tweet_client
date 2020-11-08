@@ -1,0 +1,133 @@
+@import "../../index.scss";
+
+
+.section{       
+    margin: auto;       
+    height: calc(100vh - 80px);     
+    max-width: 1170px;
+    min-width: 320px;      
+    display: grid;
+    // grid-template-rows: 1fr 1fr;
+    place-items: center;  
+    &__login{           
+        background: url('../../assets/signin.png');                
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-size: cover;                     
+    }
+    &__form{      
+        width: 100%;
+        max-width: 350px; 
+        min-width: 300px;
+        border-radius: 10px;            
+        padding: 2rem 1rem;
+        &-error{
+            display: block;
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+            font-size: .75rem;
+            color: $violet;
+            font-weight: bold;
+        }
+        &>.google-btn{
+            border-radius: 10px;
+        }
+        &-header{
+            margin-bottom: 3.5rem;  
+            text-align: center;          
+            &>h3{
+                font-size: 1.4rem;                              
+                font-weight: bold;  
+                letter-spacing: 1px;              
+                color: $violet;
+            }
+        }
+        & .form-block{            
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            
+            &>input{                
+                @extend %form-input;
+            }            
+            &>button{    
+                @extend %button-block;
+                background-color: $white;
+                color: $violet;                            
+                &:hover{                    
+                    color: $violet;
+                    box-shadow: 2px 2px 10px $violet;                    
+                }
+            }
+            &>.btn__google{
+                margin-top: 1.5rem;
+            }
+        }
+        &-footer{
+            text-align: right;            
+            &>p{
+                @extend %p-muted;
+                margin-top: 2rem;
+                &>a{                    
+                    color: $grey-dark;
+                    font-weight: bold;
+                    &:hover{
+                        color: $violet;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .section{                                   
+        &__login{
+            width: 230px;
+            height: 150px;                                                             
+        }
+        &__form{            
+            &-header{                
+                &>h3{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .section{                  
+        &__login{
+            width: 350px;
+            height: 220px;                                                             
+        }
+        &__form{                        
+            &-header{                
+                &>h3{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .section{                    
+         
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5rem;
+        grid-template-rows: 1fr;
+        &__login{  
+           width: 100%;
+           height: 65%;
+        }
+        &__form{                        
+            &-header{                
+                &>h3{
+                    font-size: 2.5rem;                    
+                }
+            }           
+        }
+    }
+}
